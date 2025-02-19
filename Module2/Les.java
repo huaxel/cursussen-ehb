@@ -18,10 +18,10 @@ public class Les {
 
         for (int i = 0; i < metroHaltes.length; i++ ){
             System.out.println(metroHaltes[i]);
-        };
+        }
         for(String halte : metroHaltes){
             System.out.println(halte);
-        };
+        }
 
         LocalDate juni = LocalDate.of(2018,6,19);
         LocalDate datumVanTekst = LocalDate.parse("1986-09-03");

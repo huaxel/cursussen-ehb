@@ -18,7 +18,7 @@ public class AverageFunc_M1 {
         int som = 0;
         for(int num :numberArray) {
             som += num;
-        };
+        }
         float average = (float) som/numberArray.length ;
         System.out.println("Het gemiddelde is: " + average);
     }

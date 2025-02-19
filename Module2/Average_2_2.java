@@ -5,9 +5,9 @@ public class Average_2_2 {
         int[] studentenScores = {12, 8, 13, 18, 15, 6, 12};
         int grootte = studentenScores.length;
         int som = 0;
-        for(int i = 0; i < grootte ; i++) {
-            som += studentenScores[i];
-        };
+        for (int studentenScore : studentenScores) {
+            som += studentenScore;
+        }
         float average = (float) som/grootte ;
         System.out.println("De gemiddelde score is: " + average);
     }
