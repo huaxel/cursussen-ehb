@@ -1,0 +1,38 @@
+/* Hide the content */
+.content {
+  display: none;
+}
+
+/* Style the nav menu */
+#mainMenu {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex; /* Make the nav horizontal */
+  flex-direction: row; /* Arrange the menu items in a row */
+}
+
+#mainMenu li {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 15px; /* Add space between items */
+}
+
+#mainMenu li.active {
+  font-weight: bold;
+  color: red; /* Highlight active item */
+}
+
+#mainMenu ul {
+  margin-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  display: none;
+}
+
+#mainMenu ul.show {
+  display: block;
+}
+
+#mainMenu ul li {
+  font-size: 0.9em;
+}
