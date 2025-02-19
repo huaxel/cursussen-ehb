@@ -1,4 +1,4 @@
-package PE2_code.src.Module1;
+package Module1;
 
 public class java1 {
 
