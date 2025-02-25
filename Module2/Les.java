@@ -1,4 +1,5 @@
 package Module2;
+
 import java.time.LocalDate;
 
 public class Les {
@@ -16,14 +17,14 @@ public class Les {
         String[] metroHaltes = {"Delacroix", "Clemenc", "Bizet"};
         metroHaltes[1] = "Clemenceau";
 
-        for (int i = 0; i < metroHaltes.length; i++ ){
+        for (int i = 0; i < metroHaltes.length; i++) {
             System.out.println(metroHaltes[i]);
         }
-        for(String halte : metroHaltes){
+        for (String halte : metroHaltes) {
             System.out.println(halte);
         }
 
-        LocalDate juni = LocalDate.of(2018,6,19);
+        LocalDate juni = LocalDate.of(2018, 6, 19);
         LocalDate datumVanTekst = LocalDate.parse("1986-09-03");
         LocalDate nu = LocalDate.now();
         LocalDate geschatteLevering = nu.plusWeeks(1);
