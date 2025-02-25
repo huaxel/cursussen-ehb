@@ -1,4 +1,4 @@
-package Module1;
+package Module1.M1;
 
 public class StarPyramid_M1 {
     public static void printPyramid(int height) {

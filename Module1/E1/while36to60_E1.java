@@ -1,4 +1,4 @@
-package Module1;
+package Module1.E1;
 
 public class while36to60_E1 {
     public static void main(String[] args) {

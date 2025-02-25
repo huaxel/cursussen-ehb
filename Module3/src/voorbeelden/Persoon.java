@@ -4,11 +4,10 @@ import javax.swing.*;
 
 public class Persoon {
 
-    String naam = 'Jan';
+    String naam = "Jan";
     int leeftijd;
 
-    Persoon(String leeftijd, int leeftijd
-    )
+    Persoon(String naam, int leeftijd)
     {
         this.naam= naam;
     }

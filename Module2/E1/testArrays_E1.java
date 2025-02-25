@@ -1,4 +1,4 @@
-package Module2;
+package Module2.E1;
 
 public class testArrays_E1 {
     public static void main(String[] args) {

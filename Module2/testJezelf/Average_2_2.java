@@ -1,4 +1,4 @@
-package Module2;
+package Module2.testJezelf;
 
 public class Average_2_2 {
     public static void main(String[] args) {

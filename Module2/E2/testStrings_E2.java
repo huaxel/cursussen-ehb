@@ -1,4 +1,4 @@
-package Module2;
+package Module2.E2;
 
 public class testStrings_E2 {
     public static void main(String[] args) {
