@@ -7,4 +7,16 @@ requires-python = ">=3.12"
 dependencies = [
     "ipykernel>=6.29.5",
     "jupyter>=1.1.1",
+    "matplotlib>=3.10.0",
+    "pandas>=2.2.3",
+    "pydantic>=2.10.6",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "uv>=0.6.3",
+]
+
+[tool.uv.workspace]
+members = ["AIE"]
