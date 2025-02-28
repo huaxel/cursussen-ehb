@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Suez+One&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  background-color: #e4efea;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.hero {
+  background: black url(../images/amazonewoud-bosbranden-header.jpg) no-repeat
+    center center;
+  background-size: cover;
+  color: white;
+  margin-bottom: 4rem;
+  padding: 4rem 0;
+}
+
+.hero-content {
+  width: 50%;
+}
+
+.hero p {
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Suez One", serfif;
+}
+
+h1 {
+  font-size: 4em;
+  letter-spacing: 0.3em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5;
+}
+
+p.publicatie {
+  color: #999;
+  text-align: right;
+  line-height: 1;
+}
+
+p.publicatie i {
+  color: #489666;
+}
+
+hr {
+  clear: both;
+  margin: 1em auto;
+
+}
+
+.featured-image {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.read-more {
+  background-color: black;
+  color: white;
+  padding: .5em 2em;
+  margin-bottom: 1em;
+  border-radius: 50px;
+  text-decoration: none;
+  float: right;
+}
+.readmore:hover {
+  color: #489666;
+}
+
+/* voorkom problemen met float van afbeeldingen
+hr {clear:both;} */

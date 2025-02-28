@@ -1,0 +1,35 @@
+body { background-color: black ;
+  color:white;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+.boxes {
+  /* background: linear-gradient(to top left, #6e9596 , #143843 );  */
+  background:  url(../images/bg.svg) no-repeat center;
+  background-size: cover;
+  /* min-height: 100vh; */
+  /* width: 80%;
+  margin: auto; */
+}
+blockquote {
+  font-size: 2rem;
+  background: linear-gradient(to bottom right, #6e9596 , #143843 );
+  width: 50%;
+  border: 5px solid white;
+  padding: 3rem;
+  margin: 0;
+}
+
+blockquote.two {
+  margin: 2em auto;
+}
+
+blockquote.three {
+  margin-left: auto;
+}
+  
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Overlay</title>
+  <style>
+    .movie-image {
+      width: 30%;
+      position: relative;
+      margin: 1rem;
+      color: yellow;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .image-overlay {
+      background:
+        linear-gradient(45deg, gold, transparent);
+      position: absolute;
+      /* inset: 0; */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .star {
+      fill: silver;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 5;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .star:hover,
+    .star.starred {
+      fill: white;
+    }
+
+    .movie-image-improved {
+      width: 30%;
+      position: relative;
+      margin: 1rem;
+    }
+
+    .movie-image-improved:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(45deg, gold, transparent);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Een afbeelding met een laag.</h1>
+
+
+  <div class="movie-image">
+
+    <img src="images/movie_5.jpg" alt="Movie 5">
+    <div class="image-overlay"></div>
+    <a href="#rate">
+      <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" height="24px" fill="
+      #5f6368">
+        <path
+          d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" />
+      </svg>
+    </a>
+  </div>
+
+
+  <div class="movie-image-improved">
+    <img src="images/movie_6.jpg" alt="Movie 6">
+    <a href="#rate">
+      <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" height="24px" fill="
+      #5f6368">
+        <path
+          d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" />
+      </svg>
+    </a>
+  </div>
+
+</body>
+
+</html>

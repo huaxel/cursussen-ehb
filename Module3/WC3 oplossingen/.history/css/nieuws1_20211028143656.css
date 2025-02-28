@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Suez+One&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  background-color: #e4efea;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.intro {
+  background: black url(../images/amazonewoud-bosbranden-header.jpg) no-repeat
+    center center;
+  background-size: cover;
+  color: white;
+  padding: 3em;
+  margin-bottom: 2em;
+}
+
+
+.intro p {
+  font-weight: bold;
+  text-indent: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Suez One", serfif;
+}
+
+h1 {
+  font-size: 4em;
+  letter-spacing: 0.3em;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  margin: 1em;
+}
+
+.publicatie + p {
+  text-indent: 2em;
+}
+
+p.publicatie {
+  color: #a1a9a2;
+  text-align: right;
+}
+
+hr {
+  clear: left;
+  margin: 1em auto;
+}
+
+p.publicatie eim {
+  color: #53aa74;
+}
+
+.featured-image {
+  float: left;
+  margin: 0 1em 1em;
+}
+
+/* voorkom problemen met float van afbeeldingen
+hr {clear:both;} */

@@ -1,0 +1,45 @@
+.menu {
+  background-color: #333;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  /* don't forget*/
+  overflow: visible;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.menu-list a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu-list a:hover {
+  background-color: lightblue;
+}
+
+.sub-menu {
+  background-color: #444;
+  visibility: hidden;
+  position: absolute;
+  top: 39px;
+  left: 0;
+  padding: 10px;
+}
+
+/* submenu zichtbaar maken als je met de muis over het 'parent' item gaat */
+.menu-list li:hover .sub-menu {
+  visibility: visible;
+}

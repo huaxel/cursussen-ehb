@@ -1,0 +1,23 @@
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-image: url(../images/bg-tile.jpg);
+    }
+
+    figure {
+      border: 1px solid #005298;
+      float:left;
+    }
+    
+    h1, figcaption {
+      background: #005298;
+      color: white;
+    }
+    
+    h2 {
+      color: #005298;
+    }
+    
+
+    hr {
+      clear: both;
+    }

@@ -1,0 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;
+    /* max-width: 1600px; */
+    background-color: deeppink;
+}
+
+.page-title {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    padding: 15vh 1em;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    background: black url(../images/bg-s.jpg) no-repeat center;
+    background-size: cover;
+    margin: 0;
+}
+
+
+
+@media screen and (min-width: 801px) {
+    body {
+        background-color: teal;
+    }
+
+    .page-title {
+        background-image: url(../images/bg-m.jpg);
+    }
+}
+
+@media screen and (min-width: 1201px) {
+
+    body {
+        background-color: navy;
+    }
+
+
+    .page-title {
+        background-image: url(../images/bg-l.jpg);
+    }
+}

@@ -1,0 +1,29 @@
+body { background-color: black ;
+  color:white;
+  margin: 0;
+  padding: 0;
+}
+.boxes {
+  background: linear-gradient(to top left, #6e9596 , #143843 ); 
+  /* width: 80%;
+  margin: auto; */
+}
+blockquote {
+  background: linear-gradient(to bottom right, #6e9596 , #143843 );
+  width: 50%;
+  border: 10px solid white
+  padding: 3em;
+  margin: 0;
+}
+
+
+li {background: linear-gradient(orange,yellow);
+  float:left;
+  width: 80px;
+  height:80px;
+  margin: 10px;
+  line-height: 80px;
+  text-align: center;
+  
+
+}

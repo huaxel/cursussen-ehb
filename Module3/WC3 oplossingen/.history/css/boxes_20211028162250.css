@@ -1,0 +1,25 @@
+body { background-color: black ;
+  color:white;
+  margin: 0;
+  padding: 0;
+}
+.boxes {
+  background: linear-gradient(to top left, #6e9596 , #143843 ); 
+  /* width: 80%;
+  margin: auto; */
+}
+blockquote {
+  font-size: 2rem;
+  background: linear-gradient(to bottom right, #6e9596 , #143843 );
+  width: 50%;
+  border: 5px solid white;
+  padding: 3rem;
+  margin: 0;
+}
+
+blockquote.two {
+  margin: 2em auto;
+}
+  
+
+}

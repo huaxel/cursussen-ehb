@@ -1,0 +1,15 @@
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    h1, figcaption {
+      background: #005298;
+      color: white;
+    }
+    
+    h2 {
+      color: #005298;
+      background:white;
+    }
+    
+    p {background-color: rgba(255,255,255,0.8);}

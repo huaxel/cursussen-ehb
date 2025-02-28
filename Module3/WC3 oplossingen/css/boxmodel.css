@@ -1,0 +1,34 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.boxes {
+  background: url(../images/bg.svg) no-repeat center;
+  padding: 10px;
+  /* border: 1px solid red; */
+  background-size: cover;
+}
+
+blockquote {
+  font-size: 2rem;
+  background: #143843;
+  width: 50%;
+  border: 5px solid white;
+  padding: 2rem;
+  margin: 3rem;
+}
+
+blockquote.two {
+  margin: 2rem auto;
+}
+
+blockquote.three {
+  margin-left: auto;
+}

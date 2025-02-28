@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  /* padding: 1rem; */
+}
+
+header,
+footer,
+article {
+  padding: 1rem 2rem;
+}
+
+article {
+  min-height: 150vh;
+  background-color: beige;
+  margin: 1rem 0;
+  /* voor positie van share-link*/
+  position: relative;
+}
+
+header,
+footer {
+  background-color: tomato;
+}
+
+nav {
+  background-color: gold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 10;
+}
+
+header {
+  margin-top: 4rem;
+}
+
+/* de sharelink komt links, en srolled dan mee naar boven */
+.share {
+  position: absolute;
+  top: 50%;
+  background: black;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* de chatlink komt onderaan rechts, en blijft altijd staan */
+#chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 40px 10px 10px;
+  background: url(../images/chat-icon.png) no-repeat center 5px;
+  background-size: 30px;
+  color: #444;
+  text-decoration: none;
+  /* dit hebben we niet gezien in de les,
+  maar omdat we in de :hover-state  de positie 10 pixels
+  lager maken, zien we nu de afbeedling naar beneden 'schuiven' 
+  dit is een heel vaak gebruikte techniek in moderen appliaties */
+  transition: background-position 0.3s ease-in;
+}
+
+#chat:hover {
+  background-color: orange;
+  background-position: center 10px;
+}
+
+/* voorbeeld ban position sticky*/
+.sticky {
+  background: orange;
+  position: sticky;
+  top: 50px;
+  /* anders komt dit onder de vaste navigatie terecht*/
+}

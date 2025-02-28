@@ -1,0 +1,28 @@
+body {
+  font-size: 14px;
+  background-color: cornsilk
+}
+
+ol {
+  color:green;
+}
+
+.speciaal {
+  background-color: yellow;
+}
+
+li li {
+  color: red;
+}
+
+dl {
+  background-color: pink;
+}
+
+dt, dd {
+  background-color: white
+}
+
+.voorbeeld {
+  color: orange;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Gallery</title>
+  <style>
+    /* * {
+      box-sizing: border-box;
+    } */
+
+    body {
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .movie-gallery {
+      background: #efefef;
+      /* 16 * 75 = 1200px */
+      max-width: 75rem;
+      padding: 1rem;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .movie-image {
+      position: relative;
+      color: yellow;
+      /* basis marge en padding van listitems neutraliseren */
+      margin: 0;
+      padding: 0;
+      flex: 1 1 389px;
+      /* flex: 1 1 calc(400px - (2 * 16px / 3)); */
+    }
+
+    .image-overlay {
+      background: linear-gradient(45deg, gold, transparent);
+      position: absolute;
+      /* inset: 0; */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Movie Gallery</h1>
+</body>
+<div class="gallery-container">
+  <ul class="movie-gallery">
+    <li class="movie-image">
+      <img src="images/movie_1.jpg" alt="Movie 1">
+      <div class="image-overlay"></div>
+    </li>
+    <li class="movie-image">
+      <img src="images/movie_2.jpg" alt="Movie 2">
+      <div class="image-overlay"></div>
+    </li>
+    <li class="movie-image">
+      <img src="images/movie_3.jpg" alt="Movie 3">
+      <div class="image-overlay"></div>
+    </li>
+    <li class="movie-image">
+      <img src="images/movie_4.jpg" alt="Movie 4">
+      <div class="image-overlay"></div>
+    </li>
+    <li class="movie-image">
+      <img src="images/movie_5.jpg" alt="Movie 5">
+      <div class="image-overlay"></div>
+    </li>
+    <li class="movie-image">
+      <img src="images/movie_6.jpg" alt="Movie 6">
+      <div class="image-overlay"></div>
+    </li>
+  </ul>
+</div>
+
+</html>

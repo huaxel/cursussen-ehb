@@ -1,0 +1,22 @@
+    figure {
+      box-sizing: border-box;
+      width: 300px;
+      padding: 15px;
+      background: #efefef;
+      border-radius: 10px;
+      /* optioneel */
+      box-shadow: 0 10px 14px rgba(0, 0, 0, .6);
+    }
+
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {  
+      text-align: center;
+      font-size: 1.5em;
+      padding-top: 15px; 
+
+    }
