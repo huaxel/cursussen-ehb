@@ -1,54 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dit is een pagina met Dummy content</title>
+    <style>
+      /*
+      rood: rgb(255,99,71)        
+      zwart: #222222
+      donkergrijs: #231F20
+      grijs: #5f6973
+      lichtgrijs: #dadcde
+      geel: #ffd602
+      wit: white
+      doorzichtig zwart: rgba(0,0,0,0.4)
+      */
+      body {
+        background-color: rgb(255, 99, 71);
+        color: #222222;
+      }
+      a {
+        color: #dadcde;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dit is een pagina met Dummy content</title>
-</head>
+      .navigatie {
+        background-color: #ffd602;
+      }
 
-<body>
-  <ul>
-    <li><a href=" #nowhere">Lorem</a></li>
-    <li><a href="#nowhere">Aliquam</a></li>
-    <li><a href="#nowhere">Morbi</a></li>
-    <li><a href="#nowhere">Praesent</a></li>
-    <li><a href="#nowhere">Pellentesque</a></li>
-  </ul>
+      .navigatie a {
+        color: #231f20;
+      }
 
-  <h1>Header level 1</h1>
+      #current {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #dadcde;
+      }
+      .navigatie a:hover {
+        background-color: #222222;
+        color: white;
+      }
 
-  <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas.
-    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-    egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et
-    sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet,
-    wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac
-    dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+      blockquote {
+        background-color: white;
+        color: rgb(255, 99, 71);
+        text-align: center;
+      }
 
-  <h2>Header Level 2</h2>
+      .special {
+        background-color: #222222;
+        color: #ffd602;
+      }
+    </style>
+  </head>
 
-  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-  <ol>
-    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-    <li>Aliquam tincidunt mauris eu risus.</li>
-  </ol>
+  <body>
+    <ul class="navigatie">
+      <li><a id="current" href=" #nowhere">Lorem</a></li>
+      <li><a href="#nowhere">Aliquam</a></li>
+      <li><a href="#nowhere">Morbi</a></li>
+      <li><a href="#nowhere">Praesent</a></li>
+      <li><a href="#nowhere">Pellentesque</a></li>
+    </ul>
 
-  <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue.
-      Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus
-      est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-  </blockquote>
+    <h1>Header level 1</h1>
 
-  <h2>Header Level 2</h2>
-  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-  <ul>
-    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-    <li>Aliquam tincidunt mauris eu risus.</li>
-  </ul>
+    <p>
+      <strong>Pellentesque habitant morbi tristique</strong> senectus et netus
+      et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+      vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet
+      quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris
+      placerat eleifend leo. Quisque sit amet est et sapien ullamcorper
+      pharetra. Vestibulum erat wisi, condimentum sed,
+      <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit
+      eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus
+      enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis.
+      Ut felis.
+    </p>
 
-  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-    quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-    ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-</body>
+    <h2>Header Level 2</h2>
 
+    <p>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas.
+    </p>
+    <ol>
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+      <li>Aliquam tincidunt mauris eu risus.</li>
+    </ol>
+
+    <blockquote>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna.
+        Cras in mi at felis aliquet congue. Ut a est eget ligula molestie
+        gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis,
+        tellus est malesuada tellus, at luctus turpis elit sit amet quam.
+        Vivamus pretium ornare est.
+      </p>
+    </blockquote>
+    <div class="special">
+      <h2>Header Level 2</h2>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas.
+      </p>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+      </ul>
+
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+    </div>
+  </body>
 </html>
