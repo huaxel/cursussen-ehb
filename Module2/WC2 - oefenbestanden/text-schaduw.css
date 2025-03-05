@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5em;
+}
+#titel1 {
+    color: white;
+  text-shadow: 10px 5px 15px rgb(0, 0, 0);
+}
+#titel2 {
+  text-shadow: 0px 0px 1px rgb(255, 255, 255);
+  background: black;
+}
+#titel3 {
+    color: red;
+  text-shadow: 12px 12px 0px rgb(0, 0, 0)
+}
