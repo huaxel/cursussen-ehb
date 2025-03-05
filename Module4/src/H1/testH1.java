@@ -26,4 +26,22 @@ Eens je deze hebt aangemaakt loop je over de arrays en print je van elk dier hie
 package H1;
 
 public class testH1 {
+    public static void main(String[] args) {
+        Eend tom = new Eend(2000);
+        Vleermuis sam = new Vleermuis(2000);
+        Kikker tim = new Kikker(2002);
+        Noordzeezalm luc = new Noordzeezalm(1999);
+        Pinguin fred = new Pinguin(1998);
+        tom.vliegen();
+        tom.zwemmen();
+        Dier[] kooi = {sam,tom};
+        Dier[] vijver = {tom,tim,luc,fred};
+        for (Dier dier : kooi){
+            dier.maakGeluid();
+        }
+        for (Dier dier : vijver) {
+            dier.maakGeluid();
+        }
+    }
+
 }
