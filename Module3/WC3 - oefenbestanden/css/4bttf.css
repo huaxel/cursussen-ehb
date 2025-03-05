@@ -1,0 +1,68 @@
+/*
+lichtgrijs: #a1a9a2
+groen: #53aa74
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Suez+One&display=swap");
+body {
+  background-color: #e4e4e4;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "Suez One", serif;
+}
+
+p {
+  margin: 0.5em;
+}
+
+.intro {
+  background-image: url(../images/bttf-header.jpg);
+  background-color: black;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 4rem;
+    margin-bottom: 1em;
+}
+
+h1 {
+  letter-spacing: 0.2em;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.movie-row {
+  display: flex;
+}
+.movie-image {
+  margin: 0 1em 1em;
+}
+.movie-image img {
+  width: 300px;
+}
+.movie-text {
+  flex: 1;
+  margin-top: 0;
+}
+.movie-text h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+.movie-text p {
+  text-indent: 2em;
+}
+.movie-date {
+  text-align: right;
+    color: #a1a9a2;
+}
+.movie-date i {
+  color: #53aa74;
+}
+ 
+hr{
+    margin: 1em auto;
+}
