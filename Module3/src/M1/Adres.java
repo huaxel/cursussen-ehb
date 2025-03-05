@@ -92,4 +92,14 @@ public class Adres {
         System.out.println(formatAdres);
     }
 
+    @Override
+    public String toString() {
+        return "Adres{" +
+                "straatnaam='" + straatnaam + '\'' +
+                ", huisnummer=" + huisnummer +
+                ", bus='" + bus + '\'' +
+                ", postcode=" + postcode +
+                ", woonplaats='" + woonplaats + '\'' +
+                '}';
+    }
 }

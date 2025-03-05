@@ -9,4 +9,46 @@ Maak om alles te testen enkele huisdieren en honden aan en kijk wat er gebeurt a
 
 package M1;
 public class Huisdier {
+    private String naam;
+    private double gewicht;
+    private int leeftijd;
+
+    public Huisdier(String naam, double gewicht, int leeftijd) {
+        this.naam = naam;
+        this.gewicht = gewicht;
+        this.leeftijd = leeftijd;
+    }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public double getGewicht() {
+        return gewicht;
+    }
+
+    public void setGewicht(double gewicht) {
+        this.gewicht = gewicht;
+    }
+
+    public int getLeeftijd() {
+        return leeftijd;
+    }
+
+    public void setLeeftijd(int leeftijd) {
+        this.leeftijd = leeftijd;
+    }
+
+    @Override
+    public String toString() {
+        return "Huisdier{" +
+                "naam='" + naam + '\'' +
+                ", gewicht=" + gewicht +
+                ", leeftijd=" + leeftijd +
+                '}';
+    }
 }

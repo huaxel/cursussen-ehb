@@ -19,7 +19,7 @@ Voor de waarde van pi kan je Math.PI gebruiken.
  */
 
 public class Cirkel {
-    private float straal;
+    private double straal;
     private String kleur;
     private static final String DEFAULT_KLEUR = "wit";
 
@@ -33,17 +33,17 @@ public class Cirkel {
         this.kleur = kleur;
     }
 
-    public Cirkel(float straal) {
+    public Cirkel(double straal) {
         this.setStraal(straal);
         this.kleur = DEFAULT_KLEUR;
     }
 
-    public Cirkel(String kleur, float straal) {
+    public Cirkel(String kleur, double straal) {
         this.setStraal(straal);
         this.kleur = kleur;
     }
 
-    public void setStraal(float straal) {
+    public void setStraal(double straal) {
         if (straal < 0) {
             throw new IllegalArgumentException("Straal kan niet negatief zijn.");
         }
@@ -54,7 +54,7 @@ public class Cirkel {
         this.kleur = kleur;
     }
 
-    public float getStraal() {
+    public double getStraal() {
         return this.straal;
     }
 
@@ -62,12 +62,12 @@ public class Cirkel {
         return this.kleur;
     }
 
-    public float geefOmtrek() {
+    public double geefOmtrek() {
         return (float) (2 * Math.PI * this.straal);
     }
 
-    public float geefOppervlakte() {
-        return (float) (Math.PI * this.straal * this.straal);
+    public double  geefOppervlakte() {
+        return (double) (Math.PI * this.straal * this.straal);
     }
 
     public void print() {
