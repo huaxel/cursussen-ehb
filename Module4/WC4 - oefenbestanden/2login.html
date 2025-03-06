@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/2login.css" />
+  </head>
+  <body>
+    <div class="login">
+      <h2>Inloggen</h2>
+      <form action="login" method="post">
+        <label for="username">Loginnaam: </label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Wachtwoord: </label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+      </form>
+      <div class="options">
+        <a href="#" class="forgot-password" target="_blank">Wachtwoord vergeten?</a>
+        <p>Nog geen account?</p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Registreer hier
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
