@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/3form-film.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Film toevoegen</h1>
+    <form action="https://www.w3schools.com/action_page.php">
+        <label for="titel">Film Titel:</label>
+        <input type="text" id="titel" name="titel" required></input>
+        
+        <label for="director">Regisseur:</label>
+        <input type="text" id="director" name="director" required></input>
+        
+        <label for="jaar">Jaar van uitgave:</label>
+        <input type="number" id="jaar" name="jaar" min="1800" max="2300" required</input>
+        
+        <label for="genre">Genre:</label>
+        <select multiple id="genre" name="genre" required>
+            <option value="">Kies een genre</option>
+            <option value="actie">Actie</option>
+            <option value="drama">Drama</option>
+            <option value="komedie">Komedie</option>
+            <option value="horror">Horror</option>
+            <option value="science fiction">Science Fiction</option>
+        </select>
+        
+        <label for="beschrijving">Beschrijving (plot):</label>
+        <textarea id="beschrijving" name="beschrijving" rows="4" required></textarea>
+        
+        <fieldset>
+            <legend>Beoordeling:</legend>
+            <label><input type="radio" name="rating" value="1"> 1</label>
+            <label><input type="radio" name="rating" value="2"> 2</label>
+            <label><input type="radio" name="rating" value="3"> 3</label>
+            <label><input type="radio" name="rating" value="4"> 4</label>
+            <label><input type="radio" name="rating" value="5"> 5</label>
+        </fieldset>
+        <input type="hidden" name="verborgenveld" value="het werkt">
+        <button type="submit">Opslaan</button>
+    </form>
+</div>
+</body>
+</html>
