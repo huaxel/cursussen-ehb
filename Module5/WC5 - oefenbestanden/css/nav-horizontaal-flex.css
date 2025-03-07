@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navigatie {
+    background-color: black;
+}
+.navigatie ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigatie li {
+    border-left: 1px solid #fff;
+}
+
+.navigatie li:first-child {
+    margin-right: auto;
+}
+
+.navigatie a {
+    display: block;
+    background: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-right: 1px solid #ffffff;
+    padding: 1em ;
+}
+.navigatie a:hover {
+    background-color: #737373;
+    color: rgb(0, 0, 0);
+}

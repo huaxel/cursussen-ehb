@@ -1,0 +1,41 @@
+.movie-image {
+    position: relative;
+    width: 80%;
+    margin: 1rem;
+    color: yellow;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+.image-overlay {
+    position: absolute;
+    display: inline-block;
+    background: linear-gradient(45deg,  gold, transparent);    
+inset: 0;
+}
+.star {
+    position: absolute;
+    fill: rgb(180, 180, 180);
+    z-index: 5;
+    top: 10px;
+    right: 10px;
+    width: 2em;
+    height: 2em;
+}
+.star:hover {
+    fill: white;
+}
+.movie-image-improved{
+    position: relative;
+    width: 80%;
+    margin: 1rem;
+}
+.movie-image-improved::before{
+    background: linear-gradient(45deg,  rgb(16, 14, 143), transparent);
+    content: "";
+    position: absolute;
+    display: inline;
+    inset: 0;
+}

@@ -1,0 +1,39 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    margin: 0;
+    padding: 0;
+}
+.movie-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #efefef;
+    list-style: none;
+    max-width: 1200px;
+    padding: 16px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.movie-image {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    flex: 1 1 389px;
+}
+.movie-image:hover:before{
+    content: '';
+    background: linear-gradient(45deg,gold,transparent);
+    position: absolute;
+    inset: 0;
+}
