@@ -26,7 +26,7 @@ switch (keuze){
         break;
     case '4':
         resultaat = eerstegetal / tweedegetal;
-        console.log(`Je koos ervoor om ${eerstegetal} door ${tweedegetal} te delen. Het resultaat is ${resultaat}`)
+        console.log(`Je koos ervoor om ${eerstegetal} door ${tweedegetal} te delen. Het resultaat is ${resultaat.toFixed(2)}`)
         break; 
     default:
         console.log('Geef een valabele keuze')
