@@ -4,17 +4,18 @@ import { stdin as input, stdout as output } from "node:process";
 const userInput = readline.createInterface({ input, output });
 
 let getal = parseInt(await userInput.question('Geef een getal: '));
-let divisor = getal; 
 
-for (let i = getal - 1 ; i > 1 ; i--) {
-    if(getal%i === 0){
-        divisor = i;
+let isPrime = true;
+
+for (let i = 2 ; i <= Math.sqrt(getal); i++){
+    if (getal % i == 0){
+        isPrime = false;
         break;
     }
 }
 
-const result = divisor != getal ? "geen priemgetal." : "een priemgetal.";
+const result = isPrime ? 'een priemgetal.' : 'geen priemgetal.'
 
-console.log(`${getal} is ${result}`);
+console.log(`${getal} is ${result}`)
 
-userInput.close();
+userInput.close()
