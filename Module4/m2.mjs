@@ -36,3 +36,6 @@ let height = 3;
  **
 ***
 */
+function piramide(startTop,startLeft,height){
+    
+}
