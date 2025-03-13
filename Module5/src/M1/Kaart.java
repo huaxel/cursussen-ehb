@@ -29,4 +29,7 @@ public class Kaart {
     public String toString() {
         return waarde + " van " + kleur ;
     }
+
+    public boolean isHogerDan(Kaart other) {
+        return this.waarde.getNumeriekeWaarde() >= other.waarde.getNumeriekeWaarde();    }
 }
