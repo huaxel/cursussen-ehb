@@ -12,42 +12,44 @@
 */
 
 class Bankrekening {
+    static laatsteRekeningNr = 0;
+
     constructor(eigenaar, saldo = 0) {
         this._rekeningnummer = Bankrekening.rekeningNrGenerator();
         this._eigenaar = eigenaar;
         this._saldo = saldo;
         this.type = "Betaalrekening";
     }
-    get rekeningnummer {
+    get rekeningnummer() {
         return this._rekeningnummer;
 
     }
-    get eigenaar{
+    get eigenaar(){
         return this._eigenaar;
 
     }
-    get saldo{
+    get saldo() {
         return this._saldo;
 
     }
     set saldo(bedrag){
-        bedrag >= 0 ? this._saldo = bedrag : console.log("Saldo kan niet negatief zijn.");
+        bedrag >= 0 ? this._saldo = bedrag : output("Saldo kan niet negatief zijn.");
     }
     storten(bedrag){
         if (bedrag > 0) {
             this._saldo += bedrag;
-            console.log(`€${bedrag} gestort. Nieuw saldo: €${this._saldo}`);
+            output(`€${bedrag} gestort. Nieuw saldo: €${this._saldo}`);
         } else {
-            console.log("Bedrag moet positief zijn.");
+            output("Bedrag moet positief zijn.");
         }
     }
     
     opnemen(bedrag){
         if (bedrag > 0 && this._saldo >= bedrag) {
             this._saldo -= bedrag;
-            console.log(`€${bedrag} opgenomen. Nieuw saldo: €${this._saldo}`);
+            output(`€${bedrag} opgenomen. Nieuw saldo: €${this._saldo}`);
         } else {
-            console.log("Onvoldoende saldo of ongeldig bedrag.");
+            output("Onvoldoende saldo of ongeldig bedrag.");
         }
     }
     
@@ -61,12 +63,13 @@ class Bankrekening {
 
     static validerenTransactie(from, to, bedrag) {
         if (from instanceof Bankrekening && to instanceof Bankrekening && bedrag > 0 && from.saldo >= bedrag) {
-            console.log(`Transactie gevalideerd: €${bedrag} van ${from.rekeningnummer} naar ${to.rekeningnummer}`);
+            from.opnemen(bedrag);
+            to.storten(bedrag);
+            output(`Transactie geslaagd: €${bedrag} van ${from.rekeningnummer} naar ${to.rekeningnummer}`);
             return true;
-        } else {
-            console.log("Transactie mislukt: Onvoldoende saldo of ongeldige rekeningen/bedrag.");
-            return false;
         }
+        output("Transactie mislukt: Onvoldoende saldo of ongeldige invoer.");
+        return false;
     }
 }
 // Subclass Spaarrekening
@@ -90,7 +93,11 @@ class Spaarrekening extends Bankrekening {
     }
 }
 
-// Voorbeeld gebruik:
+// Output function to display messages
+function output(message) {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML += message + '<br>';
+}
 
 // Rekeningen aanmaken
 const rekening1 = new Bankrekening("Alice", 500);
@@ -105,10 +112,7 @@ rekening2.opnemen(100);
 spaarrekening.renteToevoegen();
 
 // Transactie tussen rekeningen
-if (Bankrekening.validerenTransactie(rekening1, rekening2, 250)) {
-    rekening1.opnemen(250);
-    rekening2.storten(250);
-}
+Bankrekening.validerenTransactie(rekening1, rekening2, 250);
 
 // Overzichten tonen
 output("<br><strong>--- Overzichten ---</strong>");

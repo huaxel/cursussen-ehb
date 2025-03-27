@@ -22,17 +22,25 @@ class Voertuig {
 
     verhuur() {
         if (!this.beschikbaar) {
+            console.log(`This ${this.merk} ${this.model} is already rented.`);
             return `Dit ${this.merk} ${this.model} is al verhuurd.`;
         }
         this.beschikbaar = false;
+        console.log(
+            `Renting out ${this.merk} ${this.model} for ${this.verhuurPrijs} euro.`
+        ); // Debugging line
         return `Dit ${this.merk} ${this.model} is verhuurd voor ${this.verhuurPrijs} euro per dag.`;
     }
 
     retourneer() {
         if (this.beschikbaar) {
+            console.log(
+                `This ${this.merk} ${this.model} is already available.`
+            ); // Debugging line
             return `Dit ${this.merk} ${this.model} is al beschikbaar.`;
         }
         this.beschikbaar = true;
+        console.log(`Returning ${this.merk} ${this.model}.`); // Debugging line
         return `Dit ${this.merk} ${this.model} is geretourneerd en is nu beschikbaar.`;
     }
 
@@ -83,9 +91,9 @@ const vloot = [
 function renderVloot() {
     let html = "<h2> Beschikbare Voertuigen </h2>";
     html += "<table>";
-
     html +=
         "<tr><th>Type</th><th>Merk</th><th>Model</th><th>Jaar</th><th>Prijs</th><th>Beschikbaar</th><th>Acties</th></tr>";
+
     vloot.forEach((voertuig) => {
         html += `<tr>
             <td>${voertuig.type}</td>
@@ -93,8 +101,9 @@ function renderVloot() {
             <td>${voertuig.model}</td>
             <td>${voertuig.jaar}</td>
             <td>${voertuig.verhuurPrijs} euro</td>
-            <td class="${voertuig.beschikbaar ? "beschikbaar" : "niet-beschikbaar"}">${voertuig.beschikbaar ? "Ja" : "Nee"}
-            </td>
+            <td class="${
+                voertuig.beschikbaar ? "beschikbaar" : "niet-beschikbaar"
+            }">${voertuig.beschikbaar ? "Ja" : "Nee"}</td>
             <td>
                 <button onclick="verhuurVoertuig(${
                     voertuig.id
@@ -107,7 +116,7 @@ function renderVloot() {
     });
 
     html += "</table>";
-    html += '<div id="messages"></div>';
+    //html += '<div id="messages"></div>';
     document.getElementById("output").innerHTML = html;
 }
 
@@ -124,17 +133,15 @@ function retourneerVoertuig(id) {
     if (!voertuig) return toonBericht("Voertuig niet gevonden!");
     const bericht = voertuig.retourneer();
     toonBericht(bericht);
-    renderVloot();
+    renderVloot(); // Refresh the vehicle list
 }
 
 function toonBericht(bericht) {
+    alert("Message to display: " + bericht);
     const messagesDiv = document.getElementById("messages");
-
-    if (messagesDiv) {
-        messagesDiv.innerHTML = bericht;
-        setTimeout(() => {
-            messagesDiv.innerHTML = "";
-        }, 3000);
-    }
+    messagesDiv.innerHTML = bericht;
+    setTimeout(() => {
+        messagesDiv.innerHTML = "";
+    }, 5000);
 }
-renderVloot(); 
+renderVloot();
