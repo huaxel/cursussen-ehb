@@ -1,3 +1,19 @@
+/*
+ Onze startup heeft nood aan een systeem om de
+ verhuur van wagens bij te kunnen houden.
+ Zorg voor een collection waar je een nummerplaat
+ aan een wagen kan koppelen.
+ Om het voor ons eenvoudig te houden sorteren
+ we alles alfabetisch op de nummerplaat.
+ Voor de nummerplaten mag je een String gebruiken,
+ voor de wagens maak je een aparte klasse.
+ De klasse Wagen bevat een serienummer, brandstoftype,
+ aantal zitplaatsen en een boolean om te weten of de
+ wagen verhuurd is. Voorzie zeker een methode om wagens op
+ te zoeken aan de hand van een nummerplaat en methodes om
+ een wagen te verhuren.
+ */
+
 package M1;
 import java.util.TreeMap;
 
@@ -48,9 +64,11 @@ public class VerhuurPlatform {
     }
     @Override
     public String toString() {
-        return "VerhuurPlatform{" +
-                "wagens=" + wagens +
-                '}';
+        StringBuilder sb = new StringBuilder("VerhuurPlatform:\n");
+        for (String nummerplaat : wagens.keySet()) {
+            sb.append(nummerplaat).append(" -> ").append(wagens.get(nummerplaat)).append("\n");
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args){
@@ -66,8 +84,6 @@ public class VerhuurPlatform {
         testPlatform.verhuurWagen(opel);
         testPlatform.verhuurWagen("3333-HDT");
         testPlatform.terugbrengWagen("8090-ABC");
-
-
         System.out.println(testPlatform);
     }
 }

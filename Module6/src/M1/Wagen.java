@@ -1,8 +1,5 @@
 package M1;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-
 public class Wagen {
     private int serienummer;
     private String brandstoftype;
@@ -54,11 +51,7 @@ public class Wagen {
 
     @Override
     public String toString() {
-        return "Wagen{" +
-                "serienummer=" + serienummer +
-                ", brandstoftype='" + brandstoftype + '\'' +
-                ", zitplaatsen=" + zitplaatsen +
-                ", verhuurd=" + verhuurd +
-                '}';
+        return String.format("Wagen [Serienummer: %d, Brandstoftype: %s, Zitplaatsen: %d, Verhuurd: %b]",
+                serienummer, brandstoftype, zitplaatsen, verhuurd);
     }
 }
