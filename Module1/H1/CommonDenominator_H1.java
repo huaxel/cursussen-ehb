@@ -24,6 +24,6 @@ public class CommonDenominator_H1 {
         int gcd = getGCD(n1,n2);
 
         // print result
-        System.out.println("Het grootste gemene deler is: " + gcd);
+        System.out.println("De grootste gemene deler is: " + gcd);
     }
     }
