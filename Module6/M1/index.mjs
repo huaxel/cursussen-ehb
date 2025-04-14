@@ -3,34 +3,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusInfo = document.getElementById("status-info");
   const responseDetails = document.getElementById("response-details");
 
+  const statusDescriptions = {
+    200: "OK",
+    301: "Moved Permanently",
+    404: "Not Found",
+    500: "Server Error",
+  };
+
   endpointKnoppen.forEach((knop) => {
     knop.addEventListener("click", async () => {
-      // Added async here
       const code = knop.dataset.code;
       statusInfo.innerHTML = "Bezig met ophalen...";
       responseDetails.textContent = "";
 
       try {
-        const response = await fetch(`https://httpstat.us/${code}`);
+        const response = await fetch(`https://httpstat.us/${code}`, {
+          redirect: "manual",
+        });
+        const statusCode = parseInt(code);
 
         // Determine the status category
         let statusClass;
-        let statusText = response.statusText; // Get the status text
-        let isSuccess = response.ok; // Check if the response is successful
+        let statusText = response.statusText || statusDescriptions[response.status] || "Onbekende status";        let isSuccess = response.ok; // Check if the response is successful
+        
+        // debugging statuscodes
+        console.log("Ontvangen statuscode:", response.status);
 
-        if (response.status >= 200 && response.status < 300) {
+        if (statusCode >= 200 && statusCode < 300) {
           statusClass = "status-success";
-        } else if (response.status >= 300 && response.status < 400) {
+        } else if (statusCode >= 300 && statusCode < 400) {
           statusClass = "status-redirect";
-        } else if (response.status >= 400 && response.status < 500) {
+        } else if (statusCode >= 400 && statusCode < 500) {
           statusClass = "status-client-error";
-        } else if (response.status >= 500) {
+        } else if (statusCode >= 500) {
           statusClass = "status-server-error";
         }
 
-        // Update the status information
-        statusInfo.innerHTML = `<span class="${statusClass}">${statusText}</span><br>Succesvol: ${isSuccess}`;
+        console.log("Toegevoegde class:", statusClass);
 
+        // Reset statusInfo class and apply new one
+        statusInfo.className = "";
+        statusInfo.classList.add(statusClass);
+        statusInfo.innerHTML = `${statusText}<br>Succesvol: ${isSuccess}`;
         // Response headers and type
         const headers = [...response.headers]
           .map(([key, value]) => `${key}: ${value}`)

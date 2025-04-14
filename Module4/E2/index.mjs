@@ -9,55 +9,47 @@ Toon per product de naam, prijs, verkoopprijs en beschikbaarheid in de 'output' 
 */
 
 class Product {
-    constructor(naam, prijs, voorraad) {
-        this.naam = naam;
-        this.prijs = prijs;
-        this.voorraad = voorraad;
-    }
-    set prijs(value) {
-        if (value <= 0) {
-            this._prijs = 0;
-        } else {
-            this._prijs = value;
-        }
-    }
-    set voorraad(value) {
-        if (value <= 0) {
-            this._voorraad = 0;
-        } else {
-            this._voorraad = value;
-        }
-    }
-    get prijs() {
-        return this._prijs;
-    }
+  constructor(naam, prijs, voorraad) {
+    this.naam = naam;
+    this.prijs = prijs;
+    this.voorraad = voorraad;
+  }
+  set prijs(value) {
+    this._prijs = typeof value === "number" && value > 0 ? value : 0;
+  }
+  set voorraad(value) {
+    this._voorraad = typeof value === "number" && value > 0 ? value : 0;
+  }
+  get prijs() {
+    return this._prijs;
+  }
 
-    get voorraad() {
-        return this._voorraad;
-    }
+  get voorraad() {
+    return this._voorraad;
+  }
 
-    get verkoopprijs() {
-        return this.prijs * 1.21;
-    }
-    get beschikbaar() {
-        return this.voorraad > 0;
-    }
+  get verkoopprijs() {
+    return this.prijs * 1.21;
+  }
+  get beschikbaar() {
+    return this.voorraad > 0;
+  }
 
-    toonInfo() {
-        return `
+  toonInfo() {
+    return `
     <div class="product-card">
         <h2>${this.naam}</h2>
         <p>Inkoopprijs: <span class="price">€${this.prijs.toFixed(2)}</span></p>
         <p>Verkoopprijs (incl. BTW): <span class="price">€${this.verkoopprijs.toFixed(
-            2
+          2
         )}</span></p>
         <p>Voorraad: ${this.voorraad} stuks</p>
         <p>Status: <span>${
-            this.beschikbaar ? "Op voorraad" : "Niet op voorraad"
+          this.beschikbaar ? "Op voorraad" : "Niet op voorraad"
         }</span></p>
     </div>
     `;
-    }
+  }
 }
 const product1 = new Product("iPhone SE");
 product1.prijs = 450;

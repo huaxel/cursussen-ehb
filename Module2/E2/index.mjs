@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   kaartButton.addEventListener("click", function () {
     result.innerHTML = '';
 
-    const nameDisplay = document.createElement("p");
+    const nameDisplay = document.createElement("h1");
     nameDisplay.textContent = `🥘 ${nameInput.value}`;
 
-    const timeDisplay = document.createElement("p");
+    const timeDisplay = document.createElement("strong");
     timeDisplay.textContent = `⏱️ Bereidingstijd: ${timeInput.value} minuten`;
     const titleIngredients = document.createElement("p");
     titleIngredients.textContent = "Ingrediënten: ";

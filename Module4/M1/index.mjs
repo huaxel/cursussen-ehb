@@ -27,7 +27,7 @@ class Voertuig {
         }
         this.beschikbaar = false;
         console.log(
-            `Renting out ${this.merk} ${this.model} for ${this.verhuurPrijs} euro.`
+            `${this.merk} ${this.model} wordt voor ${this.verhuurPrijs} euro verhuurd.`
         ); // Debugging line
         return `Dit ${this.merk} ${this.model} is verhuurd voor ${this.verhuurPrijs} euro per dag.`;
     }
@@ -142,6 +142,6 @@ function toonBericht(bericht) {
     messagesDiv.innerHTML = bericht;
     setTimeout(() => {
         messagesDiv.innerHTML = "";
-    }, 5000);
+    }, 9000);
 }
 renderVloot();

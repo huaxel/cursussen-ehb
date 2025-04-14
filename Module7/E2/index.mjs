@@ -24,9 +24,12 @@ document.getElementById("showUsers").addEventListener("click", () => {
 
     console.group("Laatste inlog");
     const today = new Date();
+
     for (const user of users) {
         const lastLoginDate = new Date(user.lastLogin);
-
+        const daysSinceLastLogin = Math.floor(
+            (today - lastLoginDate) / (1000 * 60 * 60 * 24)
+        );
         console.log(
             `${user.name} heeft zich ${daysSinceLastLogin} dagen geleden ingelogd`
         );
