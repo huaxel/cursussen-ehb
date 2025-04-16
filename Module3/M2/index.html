@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Game Score Tracker</h1>
+    <div>
+      <input type="text" id="playerName" placeholder="Speler naam" />
+      <input type="number" id="score" placeholder="Score" />
+      <button onclick="voegScoreToe()">Voeg Score Toe</button>
+    </div>
+    <div id="scoreBoard"></div>
+    <script>
+      const outputDiv = document.getElementById("scoreBoard");
+      const verwerkScore = (naam = "Onbekend", score = 0) => {
+        if (typeof score !== "number" || isNaN(score) || score < 0) {
+          alert("Voeg passende waarden toe");
+          return null;
+        }
+        if (typeof naam !== "string" || naam.trim() === "") {
+          alert("Voeg passende waarden toe");
+          return null;
+        }
+        return { naam, score };
+      };
+      const voegScoreToe = () => {
+        const naamInput = document.getElementById("playerName").value.trim();
+        const scoreInput = parseInt(
+          document.getElementById("score").value.trim()
+        );
+        const scoreObject = verwerkScore(naamInput, scoreInput);
+
+        if (scoreObject) {
+          outputDiv.innerHTML += `<p> Speler ${scoreObject.naam} heeft een score van ${scoreObject.score} punten. </p>`;
+        }
+      };
+    </script>
+  </body>
+</html>
