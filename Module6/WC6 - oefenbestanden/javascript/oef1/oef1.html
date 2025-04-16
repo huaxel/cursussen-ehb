@@ -17,6 +17,19 @@
   <p class="speciaal">Dit is paragraaf 2</p>
   <p>Dit is paragraaf 3</p>
 
+
+  <script>
+    const h2 = document.getElementById('titel2')
+    console.log(h2)
+
+    const paragrafen = document.getElementsByTagName('p');
+    paragrafen.forEach(paragraaf => {
+      console.log(paragraaf)
+    });
+
+    const special = document.getElementsByClassName('speciaal')
+    console.log(special[0])
+  </script>
 </body>
 
 </html>

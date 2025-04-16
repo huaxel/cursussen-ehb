@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <button id="btn1" type="button">Klik op de knop</button>
+    </div>
+    <script>
+      const button = document.getElementById("btn1");
+      const div = document.getElementById("container");
+
+      button.addEventListener("click", () => {
+        console.log("Yes! Het werkt");
+        const paragraaf = document.createElement("p");
+        const text = document.createTextNode("Yes! Het werkt!");
+        paragraaf.appendChild(text);
+        div.appendChild(paragraaf);
+      });
+    </script>
+  </body>
+</html>

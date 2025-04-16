@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lijstje voor DOM oefeningen</title>
+    <style>
+      .hot {
+        background-color: rgb(124, 36, 36);
+      }
+      .cold {
+        background-color: rgb(58, 58, 146);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <h1 class="header">Lijst</h1>
+      <h2>Boodschappenlijst</h2>
+      <ul>
+        <li id="one" class="hot"><em>Verse</em>bosbessen</li>
+        <li id="two" class="hot">Pizza</li>
+        <li id="three">Honing</li>
+        <li id="four">Olijfolie</li>
+      </ul>
+    </div>
+    <script>
+      function wijzig1() {
+        let pizza = document.getElementById("two");
+        pizza.textContent = "Lasagne";
+        pizza.style.border = "solid 1px red";
+      }
+
+      function wijzig2() {
+        const hot = document.querySelectorAll(".hot");
+        if (hot.length > 0) {
+          hot[0].classList.remove("hot");
+          hot[0].classList.add("cold");
+        }
+      }
+      wijzig1()
+      wijzig2()
+    </script>
+  </body>
+</html>

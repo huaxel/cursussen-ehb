@@ -23,10 +23,12 @@ inset: 0;
     right: 10px;
     width: 2em;
     height: 2em;
+    transition: fill 0.3s;
 }
 .star:hover {
     fill: white;
 }
+
 .movie-image-improved{
     position: relative;
     width: 80%;

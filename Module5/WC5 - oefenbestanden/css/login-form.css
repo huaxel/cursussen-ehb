@@ -57,7 +57,8 @@ button {
     margin-bottom: 20px;
 }
 button:hover{
-    background: #007bff;
+    background: navy;
+    font-weight: bold;
 }
 .options{
     display: flex;
@@ -87,7 +88,7 @@ button:hover{
     cursor: pointer;
 }
 .register-button:hover {
-    background-color: #007bff ;
+    background-color: navy;
     color: white;
     text-decoration: none;
 }
