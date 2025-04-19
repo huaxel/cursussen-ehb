@@ -12,12 +12,46 @@ Hiervoor kan je gebruik maken van de equals() methode.
 
 package E1;
 
-public class Boek {
-    private String titel;
-    private int ISBN;
+import java.util.Objects;
 
-    public Boek(String titel, int ISBN) {
-        this.titel = titel;
-        this.ISBN = ISBN;
-    }
+public abstract class Boek {
+  private String titel;
+  private int ISBN;
+  private BoekType type;
+
+  public Boek(String titel, int ISBN, BoekType type) {
+    this.titel = titel;
+    this.ISBN = ISBN;
+    this.type = type;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+    Boek boek = (Boek) obj;
+    return ISBN == boek.ISBN && Objects.equals(titel, boek.titel);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(titel, ISBN);
+  }
+
+  public String getTitel() {
+    return titel;
+  }
+
+  public int getISBN() {
+    return ISBN;
+  }
+
+  @Override
+  public String toString() {
+    return "Boek{" +
+            "titel='" + titel + '\'' +
+            ", ISBN=" + ISBN +
+            ", type=" + type +
+            '}';
+  }
 }

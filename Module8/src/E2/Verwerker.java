@@ -10,4 +10,38 @@ double getal = Double.valueOf("1.618");
  */
 
 package E2;
-public class Verwerker {}
+
+import E1.Reader;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Verwerker {
+  private Reader reader;
+  private String[] contentsArray;
+  private List<Double> getallenLijst;
+
+  public Verwerker() {
+    reader = new Reader();
+    String contents = reader.readFile("Module8/src/E1/test.csv");
+    contentsArray = contents.split(",");
+    getallenLijst = new ArrayList<>();
+    verwerkGetallen();
+  }
+
+  public void verwerkGetallen() {
+    for (String element : contentsArray) {
+      try {
+        double getal = Double.parseDouble(element.trim());
+        getallenLijst.add(getal);
+        System.out.println(getal);
+      } catch (NumberFormatException e) {
+        System.err.println("Invalid number format for element: " + element);
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    new Verwerker();
+  }
+}

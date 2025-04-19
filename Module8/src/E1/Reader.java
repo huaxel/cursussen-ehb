@@ -14,4 +14,31 @@ behoren werkt.
  */
 package E1;
 
-public class Reader {}
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Reader {
+  public String readFile(String filePath) {
+    StringBuilder wholeText = new StringBuilder();
+
+    try (BufferedReader input = new BufferedReader(new FileReader(filePath))) {
+      String currentLine;
+
+      while ((currentLine = input.readLine()) != null) {
+        wholeText.append(currentLine).append(System.lineSeparator());
+      }
+      System.out.println(wholeText.toString());
+
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+    return wholeText.toString();
+  }
+
+  public static void main(String[] args) {
+    Reader reader = new Reader();
+    String fileContents = reader.readFile("Module8/src/E1/test.csv");
+    System.out.println(fileContents);
+  }
+}

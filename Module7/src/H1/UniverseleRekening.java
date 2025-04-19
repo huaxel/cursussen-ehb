@@ -28,6 +28,86 @@ bevat verder volgende functionaliteiten:
  */
 package H1;
 
-public class UniverseleRekening {
+import M1.BankRekening2;
+import java.util.TreeSet;
 
+public class UniverseleRekening extends BankRekening2 {
+  private TreeSet<String> volmachthebbers;
+
+  UniverseleRekening(double rekeningstand) {
+    super(rekeningstand);
+    this.volmachthebbers = new TreeSet<>();
+  }
+  UniverseleRekening(){
+    super();
+    this.volmachthebbers = new TreeSet<>();
+  }
+
+  public TreeSet<String> getVolmachthebbers() {
+    return volmachthebbers;
+  }
+
+  public void toevoegenVolmacht(String naam) {
+    volmachthebbers.add(naam);
+    System.out.printf("%s werd toegevoegd aan de lijst volmachthebbers%n", naam);
+  }
+
+  public void verwijderenVolmacht(String naam) {
+    try {
+      if (volmachthebbers.contains(naam)) {
+        volmachthebbers.remove(naam);
+        System.out.printf("%s werd verwijderd uit de lijst volmachthebbers%n", naam);
+      } else {
+        throw new PersoonHeeftGeenVolmacht();
+      }
+    } catch (PersoonHeeftGeenVolmacht e) {
+      System.out.println(e.getMessage());
+    }
+  }
+
+  private boolean controleerVolmacht(String naam) {
+    boolean heeftVolmacht = volmachthebbers.contains(naam);
+    System.out.printf("%s is %svolmachthebber%n", naam, heeftVolmacht ? "" : "geen ");
+    return heeftVolmacht;
+  }
+
+  public void toonVolmachthebbers() {
+    if (volmachthebbers.isEmpty()) {
+      System.out.println("Er zijn geen volmachthebbers");
+    } else {
+      System.out.println("Volmachthebbers");
+      for (String naam : volmachthebbers) {
+        System.out.println(naam);
+      }
+    }
+  }
+
+  public void geldAfhalen(double bedrag, String naam) {
+    uivoerenMetVolmacht(bedrag, naam, () -> super.geldAfhalen(bedrag));
+  }
+
+  public void geldStorten(double bedrag, String naam) {
+    uivoerenMetVolmacht(bedrag, naam, () -> super.geldStorten(bedrag));
+  }
+
+  @Override
+  public void geldAfhalen(double bedrag){
+    throw new UnsupportedOperationException("Geef de naam van de volmachthebber");
+  }
+  @Override
+  public void geldStorten(double bedrag){
+    throw new UnsupportedOperationException("Geef de naam van de volmachthebber");
+  }
+
+  public void uivoerenMetVolmacht(double bedrag, String naam, Runnable actie) {
+    try {
+      if (!controleerVolmacht(naam)) {
+        throw new PersoonHeeftGeenVolmacht();
+      } else {
+        actie.run();
+      }
+    } catch (PersoonHeeftGeenVolmacht e) {
+      System.out.println(e.getMessage());
+    }
+  }
 }

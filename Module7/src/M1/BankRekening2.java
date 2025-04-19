@@ -29,6 +29,44 @@ doorgegooid.
 
 package M1;
 
-public class BankRekening {
+public class BankRekening2 {
+  protected double rekeningStand;
+  protected static final double DEFAULT_STAND = 0.0;
 
+  public BankRekening2() {
+    this.rekeningStand = DEFAULT_STAND;
+  }
+
+  public BankRekening2(double rekeningStand) {
+    this.setRekeningStand(rekeningStand);
+  }
+
+  protected void setRekeningStand(double rekeningStand) {
+    if (this.rekeningStand >= 0) {
+      this.rekeningStand = rekeningStand;
+    }
+    else {
+      this.rekeningStand = 0;
+    }
+  }
+
+  public void geldStorten(double bedrag) {
+    this.rekeningStand += bedrag;
+  }
+
+  public void geldAfhalen(double bedrag) {
+    try {
+      if (rekeningStand >= bedrag) {
+        rekeningStand -= bedrag;
+        System.out.println(
+            String.format(
+                "Je hebt %.2f euro van je rekening afgehaald, je huidig saldo is %.2f euro",
+                bedrag, rekeningStand));
+      } else {
+        throw new OntoereikendSaldo("Je hebt ontoereikend saldo voor deze operatie");
+      }
+    } catch (OntoereikendSaldo e) {
+      System.out.println(e.getMessage());
+    }
+  }
 }

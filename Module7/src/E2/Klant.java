@@ -16,6 +16,50 @@ aan de aankoopdatum (value). Voorzie de volgende methoden:
 
 package E2;
 
+import E1.Boek;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Klant {
     private String naam;
+    private HashMap<Boek, LocalDate> boodschappenMandje;
+
+    public Klant(String naam){
+        this.naam = naam;
+        this.boodschappenMandje = new HashMap<>();
+    }
+
+    public void toevoegenAanMandje(Boek boek, LocalDate aankoopdatum){
+        boodschappenMandje.put(boek,aankoopdatum);
+    }
+    public void verwijderUitMandje (Boek boek) throws BoekNietInMandjeException{
+        try {if (boodschappenMandje.containsKey(boek)){
+            boodschappenMandje.remove(boek);
+        System.out.println(String.format("Het boek %s is uit het mandje verwijderd", boek.getTitel()));
+        } else {
+            throw new BoekNietInMandjeException(String.format("Het boek %s zit niet in het mandje", boek.getTitel()));
+        }}
+        catch (BoekNietInMandjeException e){
+      System.out.println(e.getMessage());
+        }
+    }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public HashMap<Boek, LocalDate> getBoodschappenMandje() {
+        return boodschappenMandje;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Klant: " + naam + "\nBoodschappendmandje:\n");
+        for (Map.Entry<Boek,LocalDate> entry : boodschappenMandje.entrySet()){
+           sb.append(entry.getKey().toString()).append(" - Aankoopdatum: ").append(entry.getValue()).append("\n");
+        }
+        return sb.toString();
+    }
 }
