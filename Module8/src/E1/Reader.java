@@ -28,7 +28,7 @@ public class Reader {
       while ((currentLine = input.readLine()) != null) {
         wholeText.append(currentLine).append(System.lineSeparator());
       }
-      System.out.println(wholeText.toString());
+      System.out.println(wholeText);
 
     } catch (IOException e) {
       throw new RuntimeException(e);

@@ -1,6 +1,5 @@
 Factuuroverzicht: 
-2025-04-20
-appel
+2025-04-20appel
 peer
 sap
 Totaal: 12.5

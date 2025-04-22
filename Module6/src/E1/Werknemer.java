@@ -4,7 +4,7 @@ import java.util.TreeSet;
 
 public class Werknemer {
   private String naam;
-  private TreeSet<String> skills = new TreeSet<>();
+  private TreeSet<String> skills;
 
   public Werknemer(String naam) {
     this.naam = naam;

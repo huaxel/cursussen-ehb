@@ -34,7 +34,7 @@ public class Klant {
     public void toevoegenAanMandje(Boek boek, LocalDate aankoopdatum){
         boodschappenMandje.put(boek,aankoopdatum);
     }
-    public void verwijderUitMandje (Boek boek) throws BoekNietInMandjeException{
+    public void verwijderUitMandje (Boek boek) {
         try {if (boodschappenMandje.containsKey(boek)){
             boodschappenMandje.remove(boek);
         System.out.println(String.format("Het boek %s is uit het mandje verwijderd", boek.getTitel()));

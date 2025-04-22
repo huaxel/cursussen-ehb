@@ -1,0 +1,4 @@
+Straatnaam: Testlaan
+Postcode: 1070
+Huisnummer: 23 - Verbruik: 2000
+Huisnummer: 24 - Verbruik: 1000

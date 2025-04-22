@@ -34,9 +34,9 @@ public class Zwembad {
     private double totalePrijs;
 
     public Zwembad(double straal, double breedtePad, double eenheidsPrijsPad, double eenheidsPrijsOmheining) {
-        this.straal = (double) straal;
-        this.breedtePad = (double) breedtePad;
-        this.eenheidsPrijsPad = (double) eenheidsPrijsPad;
+        this.straal = straal;
+        this.breedtePad = breedtePad;
+        this.eenheidsPrijsPad = eenheidsPrijsPad;
         this.eenheidsPrijsOmheining = (double) eenheidsPrijsOmheining;
         this.cirkel = new Cirkel(straal);
         this.oppervlaktePad = new Cirkel(this.straal+this.breedtePad).geefOppervlakte() - this.cirkel.geefOppervlakte();
