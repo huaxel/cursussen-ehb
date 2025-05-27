@@ -34,7 +34,7 @@ public class Person {
 	}
 
 	public Book checkoutBook(Book book) { 
-		 if (book.isAvailable() && (books.size()+1) != maxBooks) {
+		 if (book.isAvailable() && (books.size()) != maxBooks) {
 			 books.add(book);
 			 book.setAvailable(false);
 			 return book;
@@ -46,7 +46,7 @@ public class Person {
 	public Book checkinBook(Book book) {
 		if (books.contains(book)) {
 			books.remove(book);
-			// book.setAvailable(true);
+			 book.setAvailable(true);
 			return book;
 		}
 		else
@@ -54,6 +54,6 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return name + " (" + maxBooks + " out of "+ books.size() +" books)";
+		return name + " (" + books.size() + " out of "+ maxBooks +" books)";
 	}
 }
