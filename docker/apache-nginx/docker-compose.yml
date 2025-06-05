@@ -1,0 +1,42 @@
+services:
+  website1:
+    image: httpd:2.4
+    container_name: website1
+    volumes:
+      - ./website1:/usr/local/apache2/htdocs/
+      - ./website1/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    networks:
+      - webnet
+
+  website2:
+    image: httpd:2.4
+    container_name: website2
+    volumes:
+      - ./website2:/usr/local/apache2/htdocs/
+      - ./website2/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    networks:
+      - webnet
+  website3:
+    image: httpd:2.4
+    container_name: website3
+    volumes:
+      - ./website3:/usr/local/apache2/htdocs/
+      - ./website3/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    networks:
+      - webnet
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - website1
+      - website2
+      - website3
+    networks:
+      - webnet
+
+networks:
+  webnet:
