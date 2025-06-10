@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaTesting/JavaTesting.iml" filepath="$PROJECT_DIR$/JavaTesting/JavaTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Opgave5_oef7_9/Opgave5_oef7_9.iml" filepath="$PROJECT_DIR$/Opgave5_oef7_9/Opgave5_oef7_9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SDE_opgave5_oef4/SDE_opgave5_oef4.iml" filepath="$PROJECT_DIR$/SDE_opgave5_oef4/SDE_opgave5_oef4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wc5.iml" filepath="$PROJECT_DIR$/.idea/wc5.iml" />
+    </modules>
+  </component>
+</project>
