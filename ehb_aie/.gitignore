@@ -1,0 +1,16 @@
+# idea
+.idea/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+#Large files
+~/coding/EHB/AIE/Les11/plot_summaries.txt
