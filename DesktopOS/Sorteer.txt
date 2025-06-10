@@ -1,0 +1,5 @@
+3) regel 3 | e) regel 5
+5) regel 5 | a) regel 1
+1) regel 1 | c) regel 3
+2) regel 2 | d) regel 4
+4) regel 4 | b) regel 2
