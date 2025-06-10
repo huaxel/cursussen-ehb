@@ -1,0 +1,16 @@
+Delivery ID,Customer ID,Order ID,Leveringsdatum,Item ID,Product,Aantal,Prijs per stuk,BTW %,Totaalprijs incl. BTW
+DD202510011,C001,1001,2025-03-12,1,Boekenrek,1,100,6,106.00
+,,,,,,,,,TOTAAL per levering,106.00
+DD202510012,C001,1001,2025-03-15,2,Koffiemachine,1,150,21,181.50
+DD202510012,C001,1001,2025-03-15,3,Koffiefilters,3,5,21,18.15
+,,,,,,,,,TOTAAL per levering,199.65
+DD202510113,C001,1011,2025-03-18,26,Waterkoker,1,50,21,60.50
+DD202510113,C001,1011,2025-03-18,27,Snijplank,1,15,21,18.15
+,,,,,,,,,TOTAAL per levering,78.65
+DD202510024,C002,1002,2025-03-13,4,Fietshelm,2,50,21,121.00
+,,,,,,,,,TOTAAL per levering,121.00
+DD202510035,C003,1003,2025-03-14,6,Bloembollen,10,2,6,21.20
+DD202510035,C003,1003,2025-03-14,7,Tuinkabouter,1,25,21,30.25
+,,,,,,,,,TOTAAL per levering,51.45
+DD202510126,C003,1012,2025-03-19,28,Gieter,1,20,21,24.20
+,,,,,,,,,TOTAAL per levering,24.20
