@@ -1,0 +1,203 @@
+# API-SPORTS
+
+Sample JS Fetch Request:
+
+```javascript
+var myHeaders = new Headers();
+myHeaders.append("x-rapidapi-key", "XxXxXxXxXxXxXxXxXxXxXxXx");
+myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://v3.football.api-sports.io/leagues", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
+Endpoints:
+
+- Status
+- Timezone
+- Countries:
+  - name
+  - code
+  - search
+- Leagues
+  - **Leagues/seasons**
+  - id
+  - name
+  - code
+  - search
+  - country
+  - season
+  - current
+  - team
+  - type
+  - last
+- Teams
+  - id
+  - name
+  - code
+  - search
+  - country
+  - league
+  - season
+  - venue
+  - **teams/statistics**
+    - league
+    - season
+    - team
+    - date
+  - **teams/seasons**
+    - team
+  - **teams/countries**
+- Venues
+  - id
+  - name
+  - search
+  - city
+  - country
+- Standings
+  - league
+  - season
+  - team
+- Fixtures
+  - id
+  - ids
+  - league
+  - season
+  - team
+  - live
+  - date
+  - from
+  - to
+  - next
+  - last
+  - round
+  - status
+  - venue
+  - timezone
+  - **fixtures/round**
+    - league
+    - season
+    - current
+    - timezone
+    - dates
+  - **fixtures/headtohead**
+    - h2h
+    - league
+    - season
+    - date
+    - from
+    - to
+    - next
+    - last
+    - status
+    - venue
+    - timezone
+  - **fixtures/statistics**
+    - fixture
+    - team
+    - type
+    - half
+  - **fixtures/events**
+    - fixture
+    - team
+    - player
+    - type
+  - **fixtures/lineups**
+    - fixture
+    - team
+    - player
+    - type
+  - **fixtures/players**
+    - fixture
+    - team
+- Predictions
+  - fixture
+- coachs
+  - id
+  - search
+  - team
+- Players
+  - **players/seasons**
+    - player
+  - **players/profiles**
+    - search
+    - player
+    - page
+  - **players/statistics**
+    - id
+    - search
+    - league
+    - season
+    - team
+    - page
+  - **players/teams**
+    - player
+  - players/lineups
+    - team
+    - player
+  - players/topscorers
+    - league
+    - season
+  - players/topassists
+    - league
+    - season
+  - players/topyellowcards
+    - league
+    - season
+  - players/topredcards
+    - league
+    - season
+- injuries
+  - ids
+  - league
+  - season
+  - fixture
+  - team
+  - player
+  - date
+  - timezone
+- transfers
+  - team
+  - player
+- trophies
+  - player
+  - players
+  - coach
+  - coachs
+- sidelined
+  - player
+  - players
+  - coach
+  - coachs
+- Odds
+  - league
+  - season
+  - fixture
+  - date
+  - bookmaker
+  - bet
+  - timezone
+  - page
+  - odds/live
+    - league
+    - fixture
+    - bet
+    - odds/live/bets
+      - id
+      - search
+  - odds/mapping
+    - page
+  - odds/bookmakers
+    - id
+    - search
+  - odds/bets
+    - id
+    - search

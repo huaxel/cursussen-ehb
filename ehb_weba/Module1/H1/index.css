@@ -1,0 +1,86 @@
+/* Hide the content */
+.content {
+  display: none;
+}
+
+/* Style the nav menu */
+#mainMenu li > ul {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  padding: 5px;
+  z-index: 100;
+}
+
+#mainMenu {
+  position: relative;
+
+  list-style-type: none;
+  padding-left: 0;
+  display: flex; /* Make the nav horizontal */
+  flex-direction: row; /* Arrange the menu items in a row */
+}
+
+#mainMenu li {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 15px; /* Add space between items */
+}
+
+#mainMenu li.active {
+  font-weight: bold;
+  color: #b30000;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+}
+
+#mainMenu li:hover {
+  background-color: #f0f0f0;
+}
+
+#mainMenu ul {
+  margin-left: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#mainMenu ul.show {
+  display: block;
+  max-height: 500px;
+}
+
+#mainMenu ul li {
+  font-size: 0.9em;
+}
+
+#mainMenu li:focus-within > ul {
+  display: block;
+}
+
+#mainMenu li:focus {
+  outline: 2px solid #007bff;
+}
+
+@media (max-width: 768px) {
+  #mainMenu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #mainMenu li {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  #mainMenu li > ul {
+    position: static;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+}

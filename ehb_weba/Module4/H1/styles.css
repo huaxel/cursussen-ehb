@@ -1,0 +1,119 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f1fafa;
+  color: #333;
+  margin: 30px;
+  padding: 0;
+}
+.tabs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0px;
+  padding: 0;
+  list-style: none;
+}
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #99b7e1;
+  color: white;
+  border-radius: 8px;
+  margin-right: 9px;
+}
+.tab:hover {
+  background-color: #4d89c9;
+}
+.tab.active {
+  background-color: #4d89c9;
+}
+.tab-content {
+  display: none;
+  padding: 5px 20px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.tab-content.active {
+  display: block;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+i {
+  padding-right: 9px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #c5e0f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+form input,
+textarea,
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+#course-form textarea {
+  resize: none;
+  height: 80px;
+}
+form input[type="submit"] {
+  background-color: #4d89c9;
+  color: white;
+  cursor: pointer;
+}
+form input[type="submit"]:hover {
+  background-color: #174372;
+}
+#description-counter {
+  font-size: 10px;
+  color: #333;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+#course-list,
+#student-list {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.course-item,
+.student-item {
+  position: relative;
+  padding: 10px 20px;
+  width: 200px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 8px;
+  background-color: #c5e0f5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.delete-course,
+.delete-student {
+  color: rgb(21, 48, 143);
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

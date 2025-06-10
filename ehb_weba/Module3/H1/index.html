@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="controls">
+      <input type="text" id="playerName" placeholder="Speler naam" />
+      <button onclick="maakNieuweSpeler()">Nieuwe Speler</button>
+      <button onclick="doeSchadeBijSpeler()">Doe Schade (25)</button>
+      <button onclick="levelSpelerOp()">Level Up</button>
+    </div>
+    <div id="playerStats"></div>
+    <script>
+      let playerObject = null;
+      const outputDiv = document.getElementById("playerStats");
+      const verwerkNaam = (naam) => {
+        if (typeof naam !== "string" || naam.trim() === "") {
+          alert("Voeg passende waarden toe");
+          return null;
+        }
+        return naam;
+      };
+      const maakNieuweSpeler = () => {
+        const naamInput = document.getElementById("playerName").value;
+        const naam = verwerkNaam(naamInput);
+        if (naam) {
+          playerObject = {
+            naam: naam,
+            level: 1,
+            health: 100,
+          };
+
+          outputDiv.innerHTML = `<p> Speler ${playerObject.naam} heeft niveau ${playerObject.level} en ${playerObject.health} gezondheid`;
+        }
+      };
+      const doeSchadeBijSpeler = () => {
+        if (playerObject) {
+          playerObject.health -= 25;
+          if (playerObject.health < 0) playerObject.health = 0;
+          outputDiv.innerHTML = `<p> Speler ${playerObject.naam} heeft niveau ${playerObject.level} en ${playerObject.health} gezondheid`;
+        } else {"Geen speler aangemaakt"}
+      };
+
+      const levelSpelerOp = () => {
+        if (playerObject) {
+            playerObject.level +=1;
+            playerObject.health = 100
+            outputDiv.innerHTML =`<p> Speler ${playerObject.naam} heeft niveau ${playerObject.level} en ${playerObject.health} gezondheid`; 
+        } else {"Geen speler aangemaakt"}
+      }
+    </script>
+  </body>
+</html>

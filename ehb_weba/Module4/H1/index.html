@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H1: Online Cursusplatform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>Online Cursusplatform</h1>
+    <div class="tabs">
+      <div class="tab active" data-tab="courses">
+        <i class="fa-solid fa-graduation-cap"></i>Cursussen
+      </div>
+      <div class="tab" data-tab="students">
+        <i class="fa-solid fa-user"></i>Studenten
+      </div>
+      <div class="tab" data-tab="teachers">
+        <i class="fa-solid fa-person-chalkboard"></i>Docenten
+      </div>
+      <div class="tab" data-tab="enrollments">
+        <i class="fa-solid fa-user-plus"></i>Inschrijvingen
+      </div>
+    </div>
+
+    <div class="tab-content active" id="courses">
+      <h2><i class="fa-solid fa-graduation-cap"></i>Beschikbare Cursussen</h2>
+      <div class="course-list" id="course-list"></div>
+    </div>
+
+    <div class="tab-content" id="students">
+      <h2><i class="fa-solid fa-user"></i>Studenten</h2>
+      <div class="student-list" id="student-list"></div>
+    </div>
+
+    <div class="tab-content" id="teachers">
+      <h2><i class="fa-solid fa-person-chalkboard"></i>Docenten</h2>
+      <div class="teacher-list" id="teacher-list"></div>
+    </div>
+
+    <div class="tab-content" id="enrollments">
+      <h2><i class="fa-solid fa-user-plus"></i>Inschrijvingen</h2>
+      <div class="enrollment-list" id="enrollment-list"></div>
+    </div>
+    <script type="module" src="index.mjs"></script>
+  </body>
+</html>

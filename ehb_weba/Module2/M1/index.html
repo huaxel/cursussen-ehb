@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Winkelwagen</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                justify-content: center;
+            }
+            #shoppingCart{
+              display: flex;
+              flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="shoppingCart">
+            <div id="addProduct">
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Productnaam"
+                />
+                <input type="number" id="productPrice" placeholder="Prijs" />
+                <button id="addToCart">Voeg toe aan winkelwagen</button>
+            </div>
+
+            <div id="cartControls">
+                <button id="sortByPrice">Sorteer op prijs</button>
+                <p>Totaal: €<span id="total">0.00</span></p>
+            </div>
+
+            <ul id="cartItems"></ul>
+        </div>
+        <script src="index.mjs"></script>
+    </body>
+</html>
