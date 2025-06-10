@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Standaard styling voor de link 'Wachtwoord vergeten?' */
+.forgot-password {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Styling voor de 'Registreer hier' link als knop */
+.register-button {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #007bff;
+  color: white;
+}

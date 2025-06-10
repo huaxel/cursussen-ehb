@@ -1,0 +1,37 @@
+body { background-color: black ;
+  color:white;
+}
+.boxes {
+  background: linear-gradient(to top left, #6e9596 , #143843 ); 
+  list-style: none;
+  padding: 0px;
+  overflow:auto;
+  padding: 10px;
+  width: 500px;
+  margin-left:auto;
+  margin-right: auto;
+  border: 20px solid #143843;
+  border-right-color: #6e9596 ;
+  border-left-color: #6e9596;
+
+}
+.boxes li {
+  background: linear-gradient(to bottom right, #6e9596 , #143843 );
+    float:left;
+    width: 80px;
+    height: 80px;
+    list-style: none;
+  margin: 10px;
+}
+
+
+li {background: linear-gradient(orange,yellow);
+  float:left;
+  width: 80px;
+  height:80px;
+  margin: 10px;
+  line-height: 80px;
+  text-align: center;
+  
+
+}

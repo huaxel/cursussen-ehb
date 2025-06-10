@@ -1,0 +1,73 @@
+.navigatie {
+  background-color: black;
+}
+.navigatie ul {
+  list-style: none;
+  display: flex;
+  /* justify-content: flex-start; */
+  margin: 0;
+  padding: 0;
+}
+
+.navigatie li {
+  /* padding niet op de li maar op de a, 
+  anders krijg je geen 'knop'-effect */
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.navigatie a {
+  display: block;
+  background: black;
+  color: white;
+  padding: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* extra fancy ;) de overgang van zwart naar wit gaat geleidelijk */
+  transition: background-color 0.5s;
+}
+
+.navigatie a:hover {
+  background: #efefef;
+  color: #000;
+}
+
+.close-btn {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .close-btn {
+    display: inline-block;
+    background: olive;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  .close-btn:hover svg {
+    fill: white;
+    cursor: pointer;
+  }
+
+  .navigatie {
+    background-color: olive;
+    padding: 15px;
+  }
+
+  .navigatie ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navigatie li {
+    border: none;
+  }
+
+  .navigatie li:first-child {
+    margin: initial;
+  }
+
+  /* .navigatie a {
+    border: none;
+  } */
+}

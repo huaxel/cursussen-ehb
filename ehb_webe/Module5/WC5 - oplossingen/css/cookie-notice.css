@@ -1,0 +1,46 @@
+/* Styling for the cookie notice */
+#cookie-notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+/* Link inside the cookie notice */
+#cookie-notice a {
+  color: #00baff;
+  text-decoration: none;
+}
+
+#cookie-notice a:hover {
+  text-decoration: underline;
+}
+
+/* Button to accept cookies */
+#accept-cookies {
+  background-color: #00baff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#accept-cookies:hover {
+  background-color: #0097d1;
+}
+
+/* Hide the cookie notice after acceptance */
+#cookie-notice.hidden {
+  display: none;
+}

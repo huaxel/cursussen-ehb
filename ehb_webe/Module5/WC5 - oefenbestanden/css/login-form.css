@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Suez+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+button:hover{
+    background: navy;
+    font-weight: bold;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.register-button {
+    display: block;
+    padding: 10px;
+    text-align: center;
+
+    border: solid 1px cornflowerblue;
+    background-color: white;
+    color: cornflowerblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.register-button:hover {
+    background-color: navy;
+    color: white;
+    text-decoration: none;
+}

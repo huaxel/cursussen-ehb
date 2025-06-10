@@ -1,0 +1,21 @@
+/* inconsolata-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('inconsolata-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto-Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('roboto-mono-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+p:first-of-type {
+    font-family: 'Inconsolata', monospace;
+}
+p:last-of-type {
+    font-family: 'Roboto-Mono', monospace;
+}

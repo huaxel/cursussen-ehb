@@ -1,0 +1,30 @@
+/*
+KLEUREN: 
+grijs : #aaaaaa   ->kleur van navigatielinks
+rood  : #f0141e
+
+wit   : #ffffff ->kleur van navigatielink met muisover
+zwart : #000000
+
+
+/* TYPOGRAFIE
+lettertype : Arial
+basisgrootte: 15 pixels
+*/
+
+/* BASIS CSS HIER (body, paragrafen, titels, ...) */
+
+/* HEADER & NAVIGATIE */
+
+/* INHOUD: FILMS */
+
+/*
+De rand rond de eerste film is 10 pixels
+De witruimte rond de 'movie-text' is
+  boven en onder: 1em
+  links en rechts : 2em
+*/
+
+/* ################################## */
+/* Mediaquery voor schermen vanaf 1024 pixels*/
+/* ################################## */

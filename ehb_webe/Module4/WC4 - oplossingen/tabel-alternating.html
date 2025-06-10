@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabel Alternating
+  </title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      width: 80%;
+      margin: auto;
+    }
+
+    caption {
+      caption-side: bottom;
+      margin: 1em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: black;
+      color: white;
+      border-right-color: white;
+    }
+
+    th:last-child {
+      border-color: black;
+    }
+
+    tr:nth-child(even) {
+      background-color: #eee;
+    }
+
+    tr:nth-child(odd) {
+
+      background-color: #ddd;
+    }
+
+    tr:hover {
+      background-color: tomato;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Tabellen en CSS</h1>
+  <table>
+    <caption>Toegepaste Informatica</caption>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Course</th>
+    </tr>
+    <tr>
+      <td>Tom</td>
+      <td>Aertssens</td>
+      <td>Web Essentials</td>
+    </tr>
+    <tr>
+      <td>Geert</td>
+      <td>Coulommier</td>
+      <td>IT Essentials</td>
+    </tr>
+    <tr>
+      <td>Ruben</td>
+      <td>Dejonckheere</td>
+      <td>Programming Essentials</td>
+    </tr>
+    <tr>
+      <td>Kevin</td>
+      <td>Felix</td>
+      <td>Web Advanced</td>
+    </tr>
+    <tr>
+      <td>Wim</td>
+      <td>Hambroeck</td>
+      <td>Data Essentials</td>
+    </tr>
+    <tr>
+      <td>Steve</td>
+      <td>Weemaels</td>
+      <td>Business IT</td>
+    </tr>
+  </table>
+</body>
+
+</html>

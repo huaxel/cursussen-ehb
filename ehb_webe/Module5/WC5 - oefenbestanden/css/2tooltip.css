@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    padding: auto;
+    margin: auto;
+}
+
+.tooltip-container {
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip {
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    background-color: #00058b;
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    left: 30%;
+    width: max-content;
+    max-width: 300px;
+}
+.tooltip-container:hover
+.tooltip {
+    visibility: visible;
+    cursor: pointer;
+}

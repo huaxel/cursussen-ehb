@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Suez+One&display=swap");
+body {
+    background-color: #f4f4f4;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+h1{
+    font-weight: bold;
+    size: 1.5em;
+    text-align: center;
+    display: block;
+}
+.container{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0.1em 2em;
+    margin: 2em auto;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+form button,
+form input, form select, form label, form textarea {
+    text-align: left;
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+form button {
+    background: #27A744;
+    border: 0;
+    border-radius: 3px;
+    padding: 0.5em;
+    color: #fff;
+    margin-top: .5em;
+    cursor: pointer;
+    text-align: center;
+}
+
+form input, form select, form textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+form fieldset {
+    border: lightgray 1px solid;
+}
+form [type="radio"] {
+    display: inline;
+    width: auto;
+    font-size: .9em;
+    margin-right: 0.5em;
+}

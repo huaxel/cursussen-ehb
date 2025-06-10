@@ -1,0 +1,55 @@
+body {
+	font-family: Georgia, serif;
+	background-color: #E4EFEA;
+}
+
+.intro {
+  
+  background: black url(../images/amazonewoud-bosbranden-header.jpg) no-repeat center center;
+  background-size:cover;
+  color: white;
+
+}
+
+.intro p {
+  font-weight: bold;
+  text-indent: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+	font-size: 4em;
+    letter-spacing: 0.3em;
+
+}
+
+
+
+
+.publicatie + p {
+  text-indent: 2em;
+  
+}
+
+p.publicatie {
+	color: #a1a9a2;
+  text-align: right;
+}
+
+hr {
+	clear: left;
+}
+
+p.publicatie em {
+	color: #53AA74;
+}
+
+
+.featured-image {
+  float:left;
+}

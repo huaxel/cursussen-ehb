@@ -1,0 +1,31 @@
+    body {
+      background: #efefef;
+    }
+    
+
+    figure {
+      box-sizing: border-box;
+      width: 350px;
+      padding: 15px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      /* optioneel */
+      box-shadow: 0 10px 14px rgba(0, 0, 0, .6);
+    }
+
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    figcaption {
+      font-family: cursive;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 20px 0 5px;
+      color: #4c4c4c;
+      transform: rotateY(10deg);
+    }
+    

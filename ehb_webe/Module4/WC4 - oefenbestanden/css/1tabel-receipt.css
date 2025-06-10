@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+  background: #ef8976;
+}
+h1 {
+  text-align: center;
+  color: white;
+  margin: 2rem 0;
+}
+table {
+  background-color: white;
+  border-radius: 6px;
+  width: 50ch;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+thead {
+  border-bottom: dashed 1px #aaa;
+}
+
+tfoot {
+  color: green;
+  border-top: dashed 1px #aaa;
+}
+th,td {
+  padding: 0.5em;
+}
+th {
+  color: #aaa;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+}
+td {
+  font-size: 18px;
+}
+tbody span {
+  font-size: 0.75em;
+}
+.price {
+  text-align: right;
+}

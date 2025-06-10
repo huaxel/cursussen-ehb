@@ -1,0 +1,63 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+.nav ul {
+  background: orange;
+  width: 14rem;
+  border: 1px solid black;
+  border-bottom-width: 0px;
+}
+
+.nav ul,
+.nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  color: black;
+  line-height: 1em;
+  background: orange url(../icons/svg/home.svg) no-repeat 2em center;
+  /* png of svg kan allebei en geeft hetzelfde resultaat*/
+  background-size: 2em 2em;
+  text-decoration: none;
+  padding: 2em 2em 2em 6em;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+
+.nav .blog {
+  background-image: url(../icons/blog.png);
+}
+
+.nav .learn {
+  background-image: url(../icons/learn.png);
+}
+
+.nav .discuss {
+  background-image: url(../icons/discuss.png);
+}
+
+.nav .home:hover {
+  background-image: url(../icons/home_over.png);
+}
+
+.nav .blog:hover {
+  background-image: url(../icons/blog_over.png);
+}
+
+.nav .learn:hover {
+  background-image: url(../icons/learn_over.png);
+}
+
+.nav .discuss:hover {
+  background-image: url(../icons/discuss_over.png);
+}
+
+.nav a:hover {
+  color: white;
+  background-color: black;
+}
